@@ -1,0 +1,8 @@
+node_modules
+.vscode/*
+lib-cov
+coverage
+.DS_Store
+logs
+*.log
+config.js
