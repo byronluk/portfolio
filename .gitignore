@@ -6,3 +6,4 @@ coverage
 logs
 *.log
 config.js
+nextsteps.txt

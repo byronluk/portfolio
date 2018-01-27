@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<% include ../partials/head %>
+<html>
+  <% include ../partials/head %>
 
-<body>
-  <% include ../partials/nav %>
+  <body class="animate-in">
+    <div class="container">
+      <% include ../partials/nav %>
 
-  <div>
-    <h1>I am <%= person.firstName %> <%= person.lastName %></h1>
-  </div>
+      <div class="main-section">
+        <h2 class="main-title">Hey I'm Byron, a front end web developer.</h2>
+        <p class="main-paragraph">Plus some experience with Node.js and other back-end stuff</p>
+      </div>
 
-  <% include ../partials/footer %>
-</body>
+      <% include ../partials/footer %>
+    </div>
+  </body>
+</html>

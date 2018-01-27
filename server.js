@@ -13,14 +13,7 @@ app.set('views', './views/pages');
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  const data = {
-    person: {
-      firstName: 'Byron',
-      lastName: 'Luk'
-    },
-    title: 'My Homepage',
-  }
-  res.render('index', data);
+  res.render('index', { title: 'My Homepage' });
 });
 
 app.get('/portfolio', (req, res) => {

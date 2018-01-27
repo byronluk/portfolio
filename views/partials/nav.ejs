@@ -1,8 +1,14 @@
 <nav class="nav-bar">
-  <a class="nav-header" href="/">Byron Luk</a>
-  <ul class="nav-links">
-    <li><a class="nav-link" href="/portfolio">Portfolio</a></li>
-    <li><a class="nav-link" href="/about">About</a></li>
-    <li><a class="nav-link" href="/contact">Contact</a></li>
-  </ul>
+  <a class="nav-header nav-header__mini transition" id="nav-header" href="/">Byron Luk</a>
+
+  <div class="nav-bar__mini">
+    <button onclick="onNavBlocksClick()" class="button">
+      <i class="fas fa-bars nav-blocks__mini" id="nav-blocks"></i>
+    </button>
+    <ul class="nav-links nav-links__mini visibility-hidden" id="nav-links">
+      <li><a class="nav-link nav-link__mini transition" href="/portfolio">Portfolio</a></li>
+      <li><a class="nav-link nav-link__mini transition" href="/about">About</a></li>
+      <li><a class="nav-link nav-link__mini transition" href="/contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
