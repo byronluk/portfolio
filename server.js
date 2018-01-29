@@ -46,7 +46,8 @@ app.post('/contact', (req, res, e) => {
 app.get('*', (req, res) => {
   res.send('Page not found 404').status(404);
 })
+const port = process.env.PORT || 8080;
 
-app.listen(8080, () => {
-  console.log('Server is listening on http://localhost:8080');
+app.listen(port, () => {
+  console.log('Server is listening on http://localhost' + port);
 });
