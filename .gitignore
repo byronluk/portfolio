@@ -6,4 +6,4 @@ coverage
 logs
 *.log
 config.js
-nextsteps.txt
+sendgrid.env

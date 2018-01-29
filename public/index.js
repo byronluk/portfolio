@@ -29,7 +29,7 @@ function windowLocation() {
   }
   var currentPage = location.href.match(/\/[a-z]*$/)[0];
   document.querySelector(".footer-links a[href=\"" + currentPage + "\"] .fa-circle").classList.add('active-link');
-}
+};
 $(document).ready(function() {
   $("body").animate({
     opacity: 1,
@@ -48,6 +48,8 @@ $(document).ready(function() {
         window.location = linkLocation;
     }
 });
+
 windowLocation();
 windowSizeHandler();
 window.addEventListener('resize', windowSizeHandler);
+document.getElementById('navblocksbutton').addEventListener('click', onNavBlocksClick);

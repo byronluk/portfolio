@@ -7,18 +7,27 @@
       <% include ../partials/nav %>
       <div class="main-section">
       <h2 class="page-title">Get in Touch</h2>
-        <form class="contact-form" action="/thanks" method="POST">
+        <form class="contact-form" action="/contact" method="POST">
           <label for="firstName">First Name:</label>
-          <input id="firstName" name="firstName" type="text">
+          <input id="firstName" name="firstName" type="text" class="input">
 
           <label for="lastName">Last Name:</label>
-          <input id="lastName" name="lastName" type="text">
+          <input id="lastName" name="lastName" type="text" class="input">
 
           <label for="email">Email:</label>
-          <input id="email" name="email" type="text">
+          <input id="email" name="email" type="text" class="input">
 
-          <input type="submit" />
+          <label for="emailContent">Message:</label>
+          <textarea id="emailContent" name="message" class="input"></textarea>
+
+          <input type="submit" class="submit-button" id="submit-button" />
         </form>
+        <% if (mailSent) { %>
+          <div>Thanks for the mail, 
+            <%= firstName%>. 
+            I'll get back to you soon.
+          </div>
+        <% } %>
       </div>
 
       <% include ../partials/footer %>
