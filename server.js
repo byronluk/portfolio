@@ -13,19 +13,19 @@ app.set('views', './views/pages');
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'My Homepage' });
+  res.render('index', { title: 'Byron Luk | Front-End Web Developer' });
 });
 
 app.get('/portfolio', (req, res) => {
-  res.render('portfolio', { title: 'Byron\'s Portfolio' });
+  res.render('portfolio', { title: 'Projects | Front-End Web Developer' });
 });
 
 app.get('/about', (req, res) => {
-  res.render('about', { title: 'About Me' });
+  res.render('about', { title: 'Byron Luk | Front-End Web Developer' });
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact', { title: 'Get in Touch' });
+  res.render('contact', { title: 'Contact Me | Front-End Web Developer' });
 });
 
 app.post('/thanks', (req, res) => {

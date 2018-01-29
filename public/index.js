@@ -23,9 +23,11 @@ function onNavBlocksClick() {
   }
 };
 function windowLocation() {
-  var lastPage = document.referrer.match(/\/[a-z]*$/)[0];
+  if (!!document.referrer) {
+    var lastPage = document.referrer.match(/\/[a-z]*$/)[0];
+    document.querySelector(".footer-links a[href=\"" + lastPage + "\"] .fa-circle").classList.remove('active-link');
+  }
   var currentPage = location.href.match(/\/[a-z]*$/)[0];
-  document.querySelector(".footer-links a[href=\"" + lastPage + "\"] .fa-circle").classList.remove('active-link');
   document.querySelector(".footer-links a[href=\"" + currentPage + "\"] .fa-circle").classList.add('active-link');
 }
 $(document).ready(function() {
