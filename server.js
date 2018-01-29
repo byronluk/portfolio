@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const sgMail = require('@sendgrid/mail');
-const SG_API_KEY = require('./config.js');
+// const SG_API_KEY = require('./config.js');
 const app = new express();
 
 sgMail.setApiKey(SG_API_KEY);
