@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const sgMail = require('@sendgrid/mail');
 // const SG_API_KEY = require('./config.js');
 const app = new express();
-
+const SG_API_KEY = process.env.SG_API_KEY;
 sgMail.setApiKey(SG_API_KEY);
 app.use(morgan('dev'));
 app.use(bodyParser.json());
