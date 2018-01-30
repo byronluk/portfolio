@@ -18,13 +18,12 @@ body {
   margin-bottom: 0;
 }
 .nav-bar {
-  width: 100%;
   display: flex;
 }
 .nav-header {
   font-size: 42px;
   color: black;
-  margin: 10px 45% 10px 5%;
+  margin-right: 42%;
   border: 3px solid white;
   border-radius: 4px;
   padding: 0 5px 7px 5px;
@@ -93,6 +92,9 @@ svg.active-link {
 }
 
 @media (max-width: 415px) {
+  a.nav-header {
+    margin: 10px 45% 10px 5%;
+  }
   .visibility-hidden {
     visibility: hidden;
   }
@@ -178,16 +180,84 @@ svg.active-link {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 30px 30px 30px 30px 90px 30px;
+    margin-bottom: 20px;
+  }
+  .response-text {
+    width: 70%;
   }
   textarea[name=message] {
     grid-column: 1 / span 2;
+    margin-bottom: 5px;
   }
   input.submit-button {
     grid-column: 1 / span 2;
   }
 }
 /* Page content */
+@media (min-width: 415px) {
+  .nav-list-item {
+    display: inline;
+    margin-right: 20px;
+    font-size: 24px;
+  }
+  nav.nav-bar {
+    padding: 30px 10%;
+  }
+  .nav-bar__main {
+    margin-top: 10px;
+  }
+  .contact-form {
+    display: grid;
+    grid-template-columns: 15% 20% 15px 10% 40%;
+    grid-template-rows: 40px 40px 40px 40px 30px 30px;
+  }
+  .firstName-label {
+    grid-row: 2 / span 1;
+  }
+  input[name=firstName] {
+    grid-row: 2 / span 1;
+  }
+  .lastName-label {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+  input[name=lastName] {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .email-label {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+  input[name=email] {
+    grid-row: 4 / span 1;
+  }
+  .message-label {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+  }
+  textarea[name=message] {
+    grid-column: 4 / span 2;
+    grid-row: 2 / span 5;
+  }
+  textarea.message-input {
+    padding: 4px;
+  }
+  .submit-button {
+    grid-column: 2 / span 1;
+    grid-row: 6 / span 1;
+  }
+  input.input {
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(172, 161, 161);
+  }
+}
+.nav-link {
+}
 .main-section {
+  margin: 5% 10% 0 10%;
 }
 .page-title {
   font-size: 28px;
@@ -209,4 +279,20 @@ svg.active-link {
   color: rgb(0, 66, 97);
   border: 1px solid rgb(211, 207, 207);
   box-shadow: 4px 4px 2px 1px rgb(163, 159, 159);
+}
+.input {
+  padding: 2px 4px;
+  font-family: 'Proza Libre', sans-serif;
+}
+.submit-button {
+  border-radius: 2px;
+  border: 1px solid rgb(207, 201, 188);
+  background-color: rgb(231, 224, 208);
+  font-family: 'Proza Libre', sans-serif;
+  cursor: pointer;
+  padding: 2px 8px;
+}
+.submit-button:hover {
+  color: white;
+  background-color: rgb(156, 154, 151);
 }

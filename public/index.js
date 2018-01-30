@@ -1,11 +1,14 @@
 function windowSizeHandler() {
   const mq = window.matchMedia( "(max-width:415px)" );
   var navHeader = document.getElementById('nav-header');
+  var footerLinks = document.getElementById('footer-links');
 
   if (mq.matches) {
     navHeader.innerHTML = 'BL';
+    footerLinks.style.display = 'block';
   } else {
     navHeader.innerHTML = 'Byron Luk';
+    footerLinks.style.display = 'none';
   }
 };
 function onNavBlocksClick() {
