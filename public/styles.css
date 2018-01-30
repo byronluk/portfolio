@@ -171,7 +171,7 @@ svg.active-link {
   }
   /* page content: media query max 415px */
   div.main-section {
-    margin: 5% 5% 0 5%;
+    margin: 5% 5% 20px 5%;
   }
   h2.page-title {
   }
@@ -192,6 +192,27 @@ svg.active-link {
   input.submit-button {
     grid-column: 1 / span 2;
   }
+  a.img-link {
+    margin: 10px 2px;
+  }
+  div.img-div {
+    padding: 0 10px 0 4%;
+  }
+  p.about-paragraph {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+@media (max-width: 370px) {
+  div a.img-link {
+    margin: 10px 0;
+  }
+  div div.img-div {
+    padding: 0;
+  }
+  div p.about-paragraph {
+    font-size: 13px;
+  }
 }
 /* Page content */
 @media (min-width: 415px) {
@@ -210,6 +231,7 @@ svg.active-link {
     display: grid;
     grid-template-columns: 15% 20% 15px 10% 40%;
     grid-template-rows: 40px 40px 40px 40px 30px 30px;
+    margin-bottom: 20px;
   }
   .firstName-label {
     grid-row: 2 / span 1;
@@ -252,6 +274,9 @@ svg.active-link {
     margin-bottom: 10px;
     border-radius: 3px;
     border: 1px solid rgb(172, 161, 161);
+  }
+  .response-text {
+    margin-left: 30%;
   }
 }
 .nav-link {
@@ -303,9 +328,20 @@ svg.active-link {
 }
 .project-img {
   width: 17vw;
-  min-width: 115px;
+  min-width: 135px;
   height: 12vw;
-  min-height: 90px;
+  min-height: 100px;
+  border: 1px solid silver;
+  border-radius: 2px;
+}
+.project-img:hover {
+  border: 1px soild gray;
+  box-shadow: 1.5px 2px 2px 1px rgb(173, 167, 167);
+}
+.about-paragraph {
+  margin-bottom: 20px;
+  width: 80%;
+  line-height: 1.2;
 }
 /* style images and add hover effect with box shadow */
 /* add about me section and check mobile & desktop layouts */
