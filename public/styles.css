@@ -296,3 +296,16 @@ svg.active-link {
   color: white;
   background-color: rgb(156, 154, 151);
 }
+.img-link {
+  text-decoration: none;
+  margin: 10px 20px 20px 0;
+  display: inline-block;
+}
+.project-img {
+  width: 17vw;
+  min-width: 115px;
+  height: 12vw;
+  min-height: 90px;
+}
+/* style images and add hover effect with box shadow */
+/* add about me section and check mobile & desktop layouts */
