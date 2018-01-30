@@ -4,9 +4,9 @@ const morgan = require('morgan');
 const sgMail = require('@sendgrid/mail');
 const app = new express();
 // config file exporting api key for sendgrid
-var SG_API_KEY = require('./config.js');
-//  env variable for heroku deployment
-// var SG_API_KEY = process.env.SG_API_KEY;
+// var SG_API_KEY = require('./config.js');
+// env variable for heroku deployment
+var SG_API_KEY = process.env.SG_API_KEY;
 
 sgMail.setApiKey(SG_API_KEY);
 
