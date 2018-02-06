@@ -40,7 +40,7 @@ app.post('/contact', (req, res) => {
   const msg = {
     to: 'byronluk@gmail.com',
     from: req.body.email,
-    subject: 'Portfolio Contact',
+    subject: 'Portfolio contact from ' + firstName + ' ' + req.body.lastName,
     text: req.body.message,
   };
   sgMail.send(msg);
