@@ -6,6 +6,7 @@ function windowSizeHandler() {
   if (mq.matches) {
     navHeader.innerHTML = 'BL';
     footerLinks.style.display = 'block';
+    windowLocation();
   } else {
     navHeader.innerHTML = 'Byron Luk';
     footerLinks.style.display = 'none';
@@ -52,7 +53,14 @@ $(document).ready(function() {
     }
 });
 
-windowLocation();
+function rotateProjects() {
+  const projectsContainer = document.getElementById('projects-container');
+  const projects = projectsContainer.querySelectorAll('a');
+  console.log(projects.length);
+  console.log(projects[0].getAttribute('class'));
+};
+
+rotateProjects();
 windowSizeHandler();
 window.addEventListener('resize', windowSizeHandler);
 document.getElementById('navblocksbutton').addEventListener('click', onNavBlocksClick);

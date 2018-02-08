@@ -1,0 +1,123 @@
+@media (max-width: 370px) {
+  div a.img-link {
+    margin: 10px 0;
+  }
+  div div.img-div {
+    padding: 0;
+  }
+  div p.about-paragraph {
+    font-size: 13px;
+  }
+}
+@media (max-width: 415px) {
+  a.nav-header {
+    margin: 10px 45% 10px 5%;
+  }
+  .visibility-hidden {
+    visibility: hidden;
+  }
+  button.button {
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    margin: 15px 0 5px 30%;
+    padding: 2px 4px;
+    background-color: white;
+    cursor: pointer;
+  }
+  button.button:hover {
+    background-color: rgb(32, 32, 32);
+    color: white;
+  }
+  .nav-blocks__mini {
+    font-size: 32px;
+  }
+  .nav-links__mini {
+    padding-right: 10px;
+  }
+  .nav-link__mini {
+    margin-bottom: 6px;
+  }
+  .animation-in {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  .animation-out {
+    animation-duration: 3s;
+    animation-name: slideout;
+  }
+  @keyframes slidein {
+    from {
+      position: relative;
+      bottom: 20px;
+      opacity: 0;
+    }
+  
+    to {
+      position: relative;
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideout {
+    from {
+      position: relative;
+      top: 0px;
+      opacity: 1;
+    }
+  
+    to {
+      position: relative;
+      top: 20px;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  @keyframes slideright {
+    from {
+      position: relative;
+      left: 0px;
+      opacity: 0;
+    }
+  
+    to {
+      position: relative;
+      right: 20px;
+      opacity: 1;
+    }
+  }
+  /* page content: media query max 415px */
+  div.main-section {
+    margin: 5% 5% 20px 5%;
+  }
+  h2.page-title {
+  }
+  /* contact form: media query max 415px */
+  form.contact-form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30px 30px 30px 30px 90px 30px;
+    margin-bottom: 20px;
+  }
+  .response-text {
+    width: 70%;
+  }
+  textarea[name=message] {
+    grid-column: 1 / span 2;
+    margin-bottom: 5px;
+  }
+  input.submit-button {
+    grid-column: 1 / span 2;
+  }
+  a.img-link {
+    margin: 10px 2px;
+  }
+  div.img-div {
+    padding: 0 10px 0 4%;
+  }
+  p.about-paragraph {
+    width: 100%;
+    font-size: 14px;
+  }
+}
