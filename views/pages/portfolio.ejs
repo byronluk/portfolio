@@ -3,39 +3,78 @@
   <% include ../partials/head %>
   <body>
     <div class="container">
-      <script type="text/javascript">
-        $("body").css({"opacity": "0", "width": "0"});
-      </script>
       <% include ../partials/nav %>
       <div class="main-section">
         <h2 class="portfolio page-title">My Portfolio</h2>
-        <div class="img-div" id="projects-container">
-          <a href="https://bl-change-calculator.herokuapp.com/" target="_blank" class="img-link">
-            <img class="project-img" src="img/change-calculator.png" alt="React Change Calculator">
-            <p class="test display-none">Hello</p>
-          </a>
-          <a href="https://bl-san-diego-top-spots.herokuapp.com/" target="_blank" class="img-link display-none">
-            <img class="project-img" src="img/sd-top-spots.png" alt="SD Top 30 Spots">
-            <p class="test display-none">Hello</p>            
-          </a>
-          <a href="https://bl-vstda.herokuapp.com/" target="_blank" class="img-link display-none">
-            <img class="project-img" src="img/vstda.png" alt="React Simple Todo App">
-            <p class="test display-none">Hello</p>            
-          </a>
-          <a href="https://bl-mortgage-calculator.herokuapp.com/" target="_blank" class="img-link display-none">
-            <img class="project-img" src="img/mortgage-calculator.png" alt="React Mortgage Calculator">
-            <p class="test display-none">Hello</p>            
-          </a>
-          <a href="https://write-letters-byronluk.herokuapp.com/" target="_blank" class="img-link display-none">
+        <div class="img-div projects-container" id="projects-container">
+
+          <div class="project_container">
             <img class="project-img" src="img/write-letters.png" alt="React Write Letters">
-            <p class="test display-none">Hello</p>            
-          </a>
+
+            <div class="img-description">
+              <h3 class="project-title">Write a Letter</h3>
+              <hr class="project-title__line" />
+              <p class="project-description"></p>
+              <a href="portfolio/write-letters" class="project-description__link transition">
+                Click to read more!
+              </a>
+            </div>
+          </div>
+
+          <div class="project_container display-none">
+            <img class="project-img" src="img/vstda.png" alt="React Simple Todo App">
+            <div class="img-description">
+              <h3 class="project-title">Very Simple Todo App</h3>
+              <hr class="project-title__line" />   
+              <p class="project-description"></p>
+              <a href="portfolio/vstda" class="project-description__link transition" >
+                Click to read more!
+              </a>           
+            </div>            
+          </div>
+
+          <div class="project_container display-none">
+            <img class="project-img" src="img/change-calculator.png" alt="React Change Calculator">
+            <div class="img-description">
+              <h3 class="project-title">Change Calculator</h3>
+              <hr class="project-title__line" />   
+              <p class="project-description"></p>
+              <a href="portfolio/change-calculator" class="project-description__link transition">
+                Click to read more!
+              </a>           
+            </div>
+          </div>
+
+          <div class="project_container display-none">
+            <img class="project-img" src="img/sd-top-spots.png" alt="SD Top 30 Spots">
+            <div class="img-description">
+              <h3 class="project-title">San Diego Top Spots</h3>
+              <hr class="project-title__line" />
+              <p class="project-description"></p>
+              <a href="portfolio/sd-top-spots" class="project-description__link transition">
+                Click to read more!
+              </a>           
+            </div>            
+          </div>
+
+          <div class="project_container display-none">
+            <img class="project-img" src="img/mortgage-calculator.png" alt="React Mortgage Calculator">
+            <div class="img-description">
+              <h3 class="project-title">Mortgage Calculator</h3>
+              <hr class="project-title__line" />
+              <p class="project-description"></p>
+              <a href="portfolio/mortgage-calculator" class="project-description__link transition">
+                Click to read more!
+              </a>
+            </div>            
+          </div>
         </div>
+
         <div class="angle-container">
-          <span id="right" class="projects-button">
+          <span id="right" class="projects-button__carousel">
               <i class="fas fa-angle-left"></i>
           </span>
-          <span id="left" class="projects-button">
+          <span id="left" class="projects-button__carousel">
             <i class="fas fa-angle-right"></i>
           </span>
         </div>

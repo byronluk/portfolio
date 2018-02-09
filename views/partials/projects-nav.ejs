@@ -1,0 +1,26 @@
+<nav class="nav-bar">
+    <a class="nav-header nav-header__mini transition" id="nav-header" href="../">Byron Luk</a>
+    <div class="nav-bar__mini nav-bar__main">
+      <button class="button" id="navblocksbutton">
+        <i class="fas fa-bars nav-blocks__mini" id="nav-blocks"></i>
+      </button>
+      <ul class="nav-links nav-links__mini visibility-hidden" id="nav-links">
+        <li class="nav-list-item"><a class="nav-link nav-link__mini transition" href="../portfolio">Portfolio</a></li>
+        <li class="nav-list-item"><a class="nav-link nav-link__mini transition" href="../about">About</a></li>
+        <li class="nav-list-item"><a class="nav-link nav-link__mini transition" href="../contact">Contact</a></li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      const portfolioRegex = /\/portfolio\//;
+      let checkWindow = portfolioRegex.test(window.location.href);
+      if (!!document.referrer) {
+       let lastPage = document.referrer;
+        checkWindow = !portfolioRegex.test(lastPage);
+      }
+      if (checkWindow) {
+        $("body, nav").css({"opacity": "0", "height": "0"});
+      } else {
+        $("body, div.main-section").css({"opacity": "0", "width": "0"});        
+      }
+    </script>
+  </nav>
