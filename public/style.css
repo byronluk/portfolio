@@ -227,11 +227,11 @@ table {
     height: 26vh;
     min-height: 140px;
   }
-  /* page content: media query max 415px */
+  /* page content: media query max-width 415px */
   div.main-section {
     margin: 20px 10px;
   }
-  /* contact form: media query max 415px */
+  /* contact form: media query max-width 415px */
   form.contact-form {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -388,7 +388,10 @@ svg.active-link {
   progress[value] {
     /* Reset the default appearance */
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
+    border: none;
+    color: #565666;
     width: 150px;
     height: 15px;
   }
@@ -398,6 +401,9 @@ svg.active-link {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
   }
   progress[value]::-webkit-progress-value {
+    background-color: #565666;
+  }
+  progress[value]::-moz-progress-bar {
     background-color: #565666;
   }
   a.portfolio-link {

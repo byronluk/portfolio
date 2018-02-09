@@ -1,6 +1,5 @@
 @import './reset.less';
 @import './mobile.less';
-
 html, body {
   height: 100%;
   max-width: 100%;
@@ -130,8 +129,10 @@ svg.active-link {
   progress[value] {
     /* Reset the default appearance */
     -webkit-appearance: none;
-     appearance: none;
-  
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    color: rgb(86, 86, 102);    
     width: 150px;
     height: 15px;
   }
@@ -141,6 +142,9 @@ svg.active-link {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
   }
   progress[value]::-webkit-progress-value {
+    background-color: rgb(86, 86, 102);
+  }
+  progress[value]::-moz-progress-bar { 
     background-color: rgb(86, 86, 102);
   }
   a.portfolio-link {

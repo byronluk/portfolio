@@ -38,7 +38,7 @@ $(document).ready(function() {
   $("body, div.main-section").animate({
     opacity: 1,
     width: 100 + '%',
-  }, 1700);
+  }, 1200);
 
   $("a.transition").click(function(event){
       event.preventDefault();
