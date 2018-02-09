@@ -6,11 +6,116 @@
     <div class="container">
       <% include ../partials/nav %>
 
-      <div class="main-section">
-        <h2 class="page-title">Hey I'm Byron, a front-end web developer.</h2>
-        <p class="main-paragraph">I have experience ranging from HTML and CSS to building web applications with React and Express.</p>
+      <div class="main-section front-page">
+        <img src="../../img/background.JPG" alt="image of me and my wife" class="me-image" />
+        <div class="me-description">
+          <h2 class="page-title">Hey I'm Byron, a JavaScript developer.</h2>
+          <p class="main-paragraph">My bread and butter for building web applications are React/Redux and Express. However, as a programmer, I'm always excited and eagar to learn that new language, framework, or library.</p>
+          <h3 class="skills-label">Skills:</h3>
+          <table class="skills-table">
+            <tbody>
+              <tr>
+                <td>HTML/CSS:</td>
+                <td><progress max="100" value="80">
+                  <div class="progress-bar">
+                      <span style="width: 80%;">Progress: 80%</span>
+                  </div>
+                </progress></td>
+                <td>Redux:</td>
+                <td><progress max="100" value="50">
+                  <div class="progress-bar">
+                      <span style="width: 50%;">Progress: 50%</span>
+                  </div>
+                </progress></td>
+              </tr>
+              <tr>
+                <td>JavaScript:</td>
+                <td><progress max="100" value="80">
+                  <div class="progress-bar">
+                      <span style="width: 80%;">Progress: 80%</span>
+                  </div>
+                </progress></td>
+                <td>MongoDB:</td>
+                <td><progress max="100" value="40">
+                  <div class="progress-bar">
+                      <span style="width: 40%;">Progress: 40%</span>
+                  </div>
+                </progress></td>
+              </tr>
+              <tr>
+                <td>JQuery:</td>
+                <td><progress max="100" value="70">
+                  <div class="progress-bar">
+                      <span style="width: 70%;">Progress: 70%</span>
+                  </div>
+                </progress></td>
+                <td>MySQL:</td>
+                <td><progress max="100" value="40">
+                  <div class="progress-bar">
+                      <span style="width: 40%;">Progress: 40%</span>
+                  </div>
+                </progress></td>
+              </tr>
+              <tr>
+              <tr>
+                <td>Node.js:</td>
+                <td><progress max="100" value="50">
+                  <div class="progress-bar">
+                      <span style="width: 50%;">Progress: 50%</span>
+                  </div>
+                </progress></td>
+                <td>LESS:</td>
+                <td><progress max="100" value="50">
+                  <div class="progress-bar">
+                      <span style="width: 50%;">Progress: 50%</span>
+                  </div>
+                </progress></td>
+              </tr>
+              <tr>
+              <tr>
+                <td>Express:</td>
+                <td><progress max="100" value="60">
+                  <div class="progress-bar">
+                      <span style="width: 60%;">Progress: 60%</span>
+                  </div>
+                </progress></td>
+                <td>Webpack:</td>
+                <td><progress max="100" value="60">
+                  <div class="progress-bar">
+                      <span style="width: 60%;">Progress: 60%</span>
+                  </div>
+                </progress></td>
+              </tr>
+              <tr>
+              <tr>
+                <td>React:</td>
+                <td><progress max="100" value="70">
+                  <div class="progress-bar">
+                      <span style="width: 70%;">Progress: 70%</span>
+                  </div>
+                </progress></td>
+                <td>Python:</td>
+                <td><progress max="100" value="15">
+                  <div class="progress-bar">
+                      <span style="width: 15%;">Progress: 15%</span>
+                  </div>
+                </progress></td>
+              </tr>
+              <tr class="last-child">
+                <td>
+                  <a class='resume-link' href='../../img/Byron-Luk.pdf' target='_blank'>Resume</a>
+                </td>
+                <td class="table contact">
+                  Contact: (626)383-2721 <br> byronluk@gmail.com
+                </td>
+                <td colspan="2">
+                  <a class="next-page__link portfolio-link" href="/portfolio">See my work  <i class="fas fa-long-arrow-alt-right"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <a class="next-page__link" href="/portfolio">See my work  <i class="fas fa-long-arrow-alt-right"></i></a>
       <% include ../partials/footer %>
     </div>
   </body>
