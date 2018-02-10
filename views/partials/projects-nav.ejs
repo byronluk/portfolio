@@ -18,9 +18,9 @@
         checkWindow = !portfolioRegex.test(lastPage);
       }
       if (checkWindow) {
-        $("body, nav").css({"opacity": "0", "height": "0"});
+        $("html").css({"opacity": "0", "height": "0"});
       } else {
-        $("body, div.main-section").css({"opacity": "0", "width": "0"});        
+        $("body, div.container").css({"opacity": "0", "width": "0"});        
       }
     </script>
   </nav>

@@ -47,12 +47,12 @@ $(document).ready(function() {
     currentWindow = currentWindow && !portfolioRegex.test(lastPage);
   }
   if (currentWindow) {
-    $("body, nav").animate({
+    $("html").animate({
       opacity: 1,
       height: 100 + '%',
     }, 1200);
   } else {
-    $("body, div.main-section").animate({
+    $("body, div.container").animate({
       opacity: 1,
       width: 100 + '%',
     }, 1200);
@@ -61,12 +61,12 @@ $(document).ready(function() {
       event.preventDefault();
       linkLocation = this.href;
       if (portfolioRegex.test(linkLocation) || portfolioRegex.test(window.location.href)) {
-        $("body, div.main-section").animate({
+        $("html").animate({
           opacity: 0,
           height: 0,
         }, 1200, redirectPage);
       } else {
-          $("body, div.main-section").animate({
+          $("body, div.container").animate({
             opacity: 0,
             width: 0,
           }, 1200, redirectPage);
@@ -75,7 +75,7 @@ $(document).ready(function() {
     $("a.project-transition").click(function(event) {
       event.preventDefault();
       linkLocation = this.href;
-      $("body, div.main-section").animate({
+      $("body, div.container").animate({
         opacity: 0,
         width: 0,
       }, 1200, redirectPage);
