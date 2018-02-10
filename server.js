@@ -28,9 +28,6 @@ app.get('/portfolio', (req, res) => {
 app.get('/portfolio/:project', (req, res) => {
   res.render(`projects/${req.params.project}`);
 })
-app.get('/hello', (req, res) => {
-  res.render('portfolio');
-})
 
 app.get('/about', (req, res) => {
   res.render('about', { title: 'Byron Luk | Front-End Web Developer' });
