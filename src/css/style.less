@@ -20,7 +20,7 @@ body {
   position: relative;
   margin-bottom: 0;
 }
-/* nav-bar */
+/* nav-bar --------------------------------------------------------*/
 .nav-bar {
   display: flex;
 }
@@ -49,7 +49,7 @@ a.nav-header:hover {
   color: rgb(41, 68, 126);
   text-decoration-line: underline;
 }
-/* generic page content */
+/* generic page content ------------------------------------------------------------*/
 .main-section {
   margin: 0 5%;
 }
@@ -75,7 +75,7 @@ a.nav-header:hover {
   border: 1px solid rgb(211, 207, 207);
   box-shadow: 4px 4px 2px 1px rgb(163, 159, 159);
 }
-/* footer-section */
+/* footer-section -----------------------------------------------------*/
 .footer-section {
   position: absolute;
   right: 0;
@@ -121,7 +121,7 @@ svg.active-link {
 .footer-icon:hover {
   color: rgb(8, 8, 53);
 }
-/* index.ejs all screen sizes */
+/* index.ejs all screen sizes----------------------------------------------------- */
 .resume-link {
   font-family: 'Supermercado One', cursive;
   font-size: 32px;
@@ -158,7 +158,7 @@ a.next-page__link[href="/portfolio"] {
   display: flex;
   justify-content: space-around;
 }
-/*progress-bars */
+/*progress-bars -----------------------------------------------------*/
 progress[value] {
   /* Reset the default appearance */
   -webkit-appearance: none;
@@ -205,7 +205,7 @@ progress[value]::-moz-progress-bar {
   margin-right: 20px;
   font-size: 24px;
 }
-/* portfolio content no media query -carousel */
+/* portfolio content no media query -carousel -----------------------------------------------------*/
 .page-title.portfolio {
   margin-left: 5%;
 }
@@ -243,7 +243,7 @@ progress[value]::-moz-progress-bar {
 .project_container:hover .img-description {
   visibility: visible;
   opacity: 1;
-  height: 92%;
+  height: 90%;
   box-shadow: 1.5px 2px 2px 4px rgb(173, 167, 167);  
 }
 .project-title {
@@ -338,7 +338,7 @@ progress[value]::-moz-progress-bar {
     opacity: 0;
   }
 }
-/* projects page no media query */
+/* projects page no media query -----------------------------------------------------*/
 .next-project__arrow {
   font-size: 100px;
   margin-top: 150px;
@@ -416,13 +416,13 @@ progress[value]::-moz-progress-bar {
   font-size: 16px;
   font-weight: bold;  
 }
-/* about-me.ejs no media query */
+/* about-me.ejs no media query -----------------------------------------------------*/
 .about-paragraph {
   margin-bottom: 20px;
   width: 80%;
   line-height: 1.2;
 }
-/* contact.ejs no media query */
+/* contact.ejs no media query ----------------------------------------------------- */
 .input {
   padding: 2px 4px;
   font-family: 'Proza Libre', sans-serif;
@@ -441,14 +441,14 @@ progress[value]::-moz-progress-bar {
 }
 /* Page content */
 @media (min-width: 415px) {
-  /* nav-bar min width 415px */
+  /* nav-bar min width 415px -----------------------------------------------------*/
   nav.nav-bar {
     padding: 30px 10%;
   }
   .nav-bar__main {
     margin-top: 10px;
   }
-  /* index.ejs min width 415px */
+  /* index.ejs min width 415px -----------------------------------------------------*/
   .front-page {
     display: flex;
   }
@@ -466,7 +466,7 @@ progress[value]::-moz-progress-bar {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  /* contact page min width 415 px */
+  /* contact page min width 415 px -----------------------------------------------------*/
   .contact-form {
     display: grid;
     grid-template-columns: 15% 20% 15px 10% 40%;
@@ -518,22 +518,26 @@ progress[value]::-moz-progress-bar {
   .response-text {
     margin-left: 30%;
   }
-  /* portfolio.ejs min width 415px */
+  /* portfolio.ejs min width 415px -----------------------------------------------------*/
   .img-div {
     display: flex;
     padding-left: 10%;
   }
 } 
 /* end media query min width 415 px */
-
+@media (min-width: 1920px) {
+  .project_container:hover .img-description {
+    height: 94%;
+  }
+}
 @media screen and (min-height: 720px) {
-  /* generic page content media query */
+  /* generic page content media query 720px min height*/
   .container {
     height: 81%;
   }
 }
 @media screen and (min-height: 1000px) {
-  /* generic page content media query */
+  /* generic page content media query 1000px min height */
   .container {
     height: 90%;
   }
