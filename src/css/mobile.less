@@ -10,6 +10,15 @@
   }
 }
 @media (max-width: 415px) {
+  /* generic page content ----------------------------------- */
+  html body {
+    height: auto;
+  }
+  a.next-page__link {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  /* nav-bar ----------------------------------------------------- */
   a.nav-header {
     margin: 10px 45% 10px 5%;
   }
@@ -52,21 +61,21 @@
       bottom: 20px;
       opacity: 0;
     }
-  
+    
     to {
       position: relative;
       bottom: 0px;
       opacity: 1;
     }
   }
-
+  
   @keyframes slideout {
     from {
       position: relative;
       top: 0px;
       opacity: 1;
     }
-  
+    
     to {
       position: relative;
       top: 20px;
@@ -80,14 +89,38 @@
       left: 0px;
       opacity: 0;
     }
-  
+    
     to {
       position: relative;
       right: 20px;
       opacity: 1;
     }
   }
-  /* portfolio page */
+  /* end nav-bar css */
+  /* index.ejs - home-page min-device-width: 415px */
+  .me-image {
+    width: 100%;
+  height: auto;
+  margin: 10px 0 20px 0;
+  }
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  div.extra-links {
+    flex-flow: column;
+    margin-bottom: 20%;
+  }
+  a.resume-link {
+    margin-bottom: 10px;
+  }
+  p.contact-info {
+    margin-bottom: 15px;
+  }
+  a.next-page__link[href="/portfolio"] {
+    align-self: flex-end;
+  }
+  /* portfolio page ---------------------------------------------------------------- */
   div.img-div {
     padding-left: 0;
   }
@@ -98,23 +131,36 @@
     display: flex;
     flex-direction: column;
   }
-  img.project-img {
-    width: 90%;
-    height: 26vh;
-    min-height: 140px;
+  div.projects-container div.project_container {
+    display: block;
+    margin: 10px 0 10px 0;
   }
+  img.project-img {
+    width: 98%;
+    height: 32vh;
+    min-height: 200px;
+  }
+  div.img-description {
+    overflow: scroll;
+  }
+  a.project-description__link {
+    margin-bottom: 15px;
+  }
+  div.project_container:hover .img-description {
+    height: 85%;
+  }
+
   /* page content: media query max-width 415px */
   div.main-section {
     margin: 20px 10px;
   }
-  h2.page-title {
-  }
+  
   /* contact form: media query max-width 415px */
   form.contact-form {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 30px 30px 30px 30px 90px 30px;
-    margin-bottom: 20px;
+    margin-bottom: 150px;
   }
   .response-text {
     width: 70%;
