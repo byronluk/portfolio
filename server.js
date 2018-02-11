@@ -7,6 +7,7 @@ const app = new express();
 // var SG_API_KEY = require('./config.js');
 // env variable for heroku deployment
 var SG_API_KEY = process.env.SG_API_KEY;
+console.log('ENV-VAR SENDGRID API KEY: ' + SG_API_KEY);
 
 sgMail.setApiKey(SG_API_KEY);
 
