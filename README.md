@@ -2,9 +2,5 @@
 
 ## Set-up
 1. run npm install
-2. run npm start
-
-```
-Code is still very messy
-coming back to this to clean up code
-```
+2. run npm run less for styling
+3. run npm start
