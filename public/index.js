@@ -31,7 +31,7 @@ function windowLocation() {
     document.querySelector(".footer-links").setAttribute("style", "display: none");
     return;
   }
-  if (!!document.referrer) {
+  if (!!document.referrer && !(/\/portfolio\//.test(document.referrer))) {
     var lastPage = document.referrer.match(/\/[a-z]*$/)[0];
     document.querySelector(".footer-links a[href=\"" + lastPage + "\"] .fa-circle").classList.remove('active-link');
   }
@@ -41,13 +41,18 @@ function windowLocation() {
 
 $(document).ready(function() {
   const portfolioRegex = /\/portfolio\//;
+  const mq = window.matchMedia( "(max-width:415px)" );
+    let element = 'html';
+    if (mq.matches) {
+      element = 'body';
+    }
   let currentWindow = portfolioRegex.test(window.location.href);
   if (!!document.referrer) {
     let lastPage = document.referrer;
     currentWindow = currentWindow && !portfolioRegex.test(lastPage);
   }
   if (currentWindow) {
-    $("html").animate({
+    $(element).animate({
       opacity: 1,
       height: 100 + '%',
     }, 1200);
