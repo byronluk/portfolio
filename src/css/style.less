@@ -43,11 +43,15 @@ a.nav-header:hover {
 .nav-link {
   font-size: 16px;
   color: black;
+  padding: 2px;
   text-decoration: none;
+  border: 1px solid white;  
 }
 .nav-link:hover {
   color: rgb(41, 68, 126);
-  text-decoration-line: underline;
+  border: 1px solid #efefef;
+  box-shadow: 2.5px 2.5px 2px 2px #a39f9f;
+  padding: 2px;
 }
 /* generic page content ------------------------------------------------------------*/
 .main-section {
@@ -127,15 +131,21 @@ svg.active-link {
   font-size: 32px;
   color: black;
   text-decoration: none;
+  float: left;
+  margin: 0 20% 0 5%;
 }
 .resume-link:hover {
   color: rgb(104, 104, 138);
 }
 .contact-info {
   line-height: 1.2;
+  text-align: center;
 }
 a.next-page__link[href="/portfolio"] {
-  margin-left: 0;
+  margin: 0 20% 0 0;
+  padding: 5px;
+  font-size: 32px;
+  height: 40px;
 }
 .main-paragraph {
   margin-bottom: 20px;
@@ -156,7 +166,7 @@ a.next-page__link[href="/portfolio"] {
 }
 .extra-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 /*progress-bars -----------------------------------------------------*/
 progress[value] {
@@ -375,13 +385,15 @@ progress[value]::-moz-progress-bar {
 }
 .summary-header  {
   font-family: 'Proza Libre', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
-.project__second-paragraph {
+.project__second-container  {
   width: 50%;
-  height: 200px;
-  margin: 20px 20px 0 10px;
+}
+.project__second-paragraph {
+  width: 100%;
+  margin: 20px 20px 20px 0;
 }
 .project img {
   width: 450px;
@@ -392,7 +404,7 @@ progress[value]::-moz-progress-bar {
 }
 .technology-container {
   width: 100%;
-  margin: 20px 40px 40px 10px;
+  margin: 20px 40px 40px 0;
 }
 .technology-section__header {
   font-family: 'Proza Libre', sans-serif;
@@ -409,11 +421,11 @@ progress[value]::-moz-progress-bar {
   padding-left: 20%;
 }
 .project-page__resources {
-  width: 50%;
+  width: 100%;
 }
 .resources-title {
   font-family: 'Proza Libre', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;  
 }
 /* about-me.ejs no media query -----------------------------------------------------*/
@@ -452,14 +464,17 @@ progress[value]::-moz-progress-bar {
   .front-page {
     display: flex;
   }
-  .me-image {
+  .image-section {
     width: 40%;
-    height: 5%;
-    float: left;
+  }
+  .me-image {
+    width: 100%;
+    margin-bottom: 20px;
   }
   .me-description {
     padding: 0 20px 0 30px;
     line-height: 1.2;
+    width: 70%;
   }
   .skills-container {
     display: grid;

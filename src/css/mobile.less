@@ -2,6 +2,12 @@
   div a.img-link {
     margin: 10px 0;
   }
+  div a.resume-link {
+    font-size: 26px;
+  }
+  p.contact-info {
+    font-size: 14px;
+  }
   div div.img-div {
     padding: 0;
   }
@@ -102,10 +108,16 @@
   }
   /* end nav-bar css ---------------------------------------------*/
   /* index.ejs - home-page min-device-width: 415px -----------------------------------*/
+  div.image-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+  }
   .me-image {
     width: 100%;
-  height: auto;
-  margin: 10px 0 20px 0;
+    height: auto;
+    margin: 10px 0 20px 0;
+    grid-column: 1 / span 2;
   }
   .skills-container {
     display: grid;
@@ -115,14 +127,12 @@
     flex-flow: column;
     margin-bottom: 20%;
   }
-  a.resume-link {
-    margin-bottom: 10px;
-  }
   p.contact-info {
     margin-bottom: 15px;
   }
-  a.next-page__link[href="/portfolio"] {
+  div a.next-page__link[href="/portfolio"] {
     align-self: flex-end;
+    font-size: 26px;
   }
   /* portfolio page ---------------------------------------------------------------- */
   div.img-div {
