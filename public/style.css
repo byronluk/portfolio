@@ -365,6 +365,386 @@ table {
     font-size: 75px;
   }
 }
+/* index.ejs all screen sizes----------------------------------------------------- */
+.resume-link {
+  font-family: 'Supermercado One', cursive;
+  font-size: 32px;
+  color: black;
+  text-decoration: none;
+  float: left;
+  margin: 0 20% 0 5%;
+}
+.resume-link:hover {
+  color: #68688a;
+}
+.contact-info {
+  line-height: 1.2;
+  text-align: center;
+}
+a.next-page__link[href='/portfolio'] {
+  margin: 0 20% 0 0;
+  padding: 5px;
+  font-size: 32px;
+  height: 40px;
+}
+.main-paragraph {
+  margin-bottom: 20px;
+}
+.skills-container {
+  margin-bottom: 25px;
+}
+.skills-container__label {
+  font-size: 24px;
+  font-family: 'Proza Libre', sans-serif;
+  margin-bottom: 8px;
+}
+.skill-label {
+  height: 25px;
+}
+.progress-bar__container {
+  height: 25px;
+}
+.extra-links {
+  display: flex;
+  justify-content: flex-end;
+}
+/*progress-bars -----------------------------------------------------*/
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  color: #565666;
+  width: 150px;
+  height: 15px;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+  background-color: #565666;
+}
+progress[value]::-moz-progress-bar {
+  background-color: #565666;
+}
+/* fallback for progress bar */
+.progress-bar {
+  background-color: whiteSmoke;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+  width: 250px;
+  height: 20px;
+  position: relative;
+  display: block;
+}
+.progress-bar > span {
+  background-color: blue;
+  border-radius: 2px;
+  display: block;
+  text-indent: -9999px;
+}
+.nav-list-item {
+  display: inline;
+  margin-right: 20px;
+  font-size: 24px;
+}
+/* contact.ejs no media query ----------------------------------------------------- */
+.input {
+  padding: 2px 4px;
+  font-family: 'Proza Libre', sans-serif;
+}
+.submit-button {
+  border-radius: 2px;
+  border: 1px solid #cfc9bc;
+  background-color: #e7e0d0;
+  font-family: 'Proza Libre', sans-serif;
+  cursor: pointer;
+  padding: 2px 8px;
+}
+.submit-button:hover {
+  color: white;
+  background-color: #9c9a97;
+}
+@media (min-width: 415px) {
+  /* contact page min width 415 px -----------------------------------------------------*/
+  .contact-form {
+    display: grid;
+    grid-template-columns: 15% 20% 15px 10% 40%;
+    grid-template-rows: 40px 40px 40px 40px 30px 30px;
+    margin-bottom: 20px;
+  }
+  .firstName-label {
+    grid-row: 2 / span 1;
+  }
+  input[name='firstName'] {
+    grid-row: 2 / span 1;
+  }
+  .lastName-label {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+  input[name='lastName'] {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .email-label {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+  input[name='email'] {
+    grid-row: 4 / span 1;
+  }
+  .message-label {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+  }
+  textarea[name='message'] {
+    grid-column: 4 / span 2;
+    grid-row: 2 / span 5;
+  }
+  textarea.message-input {
+    padding: 4px;
+  }
+  .submit-button {
+    grid-column: 2 / span 1;
+    grid-row: 6 / span 1;
+  }
+  input.input {
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #aca1a1;
+  }
+  .response-text {
+    margin-left: 30%;
+  }
+}
+/* portfolio content no media query -carousel -----------------------------------------------------*/
+.page-title.portfolio {
+  margin-left: 5%;
+}
+.projects-container {
+  margin-bottom: 10px;
+}
+.project_container {
+  margin: 10px 20px 10px 0;
+  position: relative;
+}
+.project-img {
+  width: 50vw;
+  min-width: 135px;
+  height: 30vw;
+  min-height: 100px;
+  border: 1px solid silver;
+  border-radius: 2px;
+}
+/* hover transition for img-description */
+.img-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #4d526cb8;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  padding: 15px;
+  /* transition effect. not necessary */
+  transition: opacity 0.8s, visibility 0.5s, height 1s;
+}
+.project_container:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+  height: 90%;
+  box-shadow: 1.5px 2px 2px 4px #ada7a7;
+}
+.project-title {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 24px;
+}
+.project-description {
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.project-description__link {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background-color: #89baba52;
+  padding: 6px;
+  border-radius: 2px;
+  transition: transform 1.5s;
+  text-align: center;
+}
+.project-description__link:hover {
+  box-shadow: 1px 1px 2px 2.5px #4f787852;
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+/* end hover content for projects */
+.display-none {
+  display: none;
+}
+.projects-button__carousel {
+  font-size: 32px;
+}
+.projects-button__carousel:hover {
+  color: gray;
+  cursor: pointer;
+}
+.angle-container {
+  padding-left: 25%;
+}
+#right {
+  margin-right: 20%;
+}
+/* animations for portfolio/projects */
+.slide-left {
+  animation: slideleft 2s;
+}
+.slide-right {
+  animation: slideright 2s;
+}
+.slide-left_out {
+  animation: fadeout 2s, slideleft 2s;
+}
+.slide-left_in {
+  animation: fadein 2s, slideleft 2s;
+}
+.slide-right_in {
+  animation: fadein 2s, slideright 2s;
+}
+.slide-right_out {
+  animation: fadeout 2s, slideright 2s;
+}
+@keyframes slideleft {
+  from {
+    position: relative;
+    right: 0;
+  }
+  to {
+    position: relative;
+    right: 65%;
+  }
+}
+@keyframes slideright {
+  from {
+    position: relative;
+    right: 62%;
+  }
+  to {
+    position: relative;
+    right: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* projects page no media query -----------------------------------------------------*/
+.next-project__arrow {
+  font-size: 100px;
+  margin-top: 150px;
+}
+.next-project__arrow:hover {
+  color: #29447e;
+}
+.next-project__link {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+.middle-container {
+  display: flex;
+}
+.main-section.project {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.project-page__headers {
+  width: 100%;
+}
+.project-page_title {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.project-page__description {
+  margin-bottom: 25px;
+}
+.summary-section {
+  width: 50%;
+}
+.summary-header {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.project__second-container {
+  width: 50%;
+}
+.project__second-paragraph {
+  width: 100%;
+  margin: 20px 20px 20px 0;
+}
+.project img {
+  width: 450px;
+  height: 250px;
+  box-shadow: 2.5px 2.5px 3px 3.5px #8a8a8a;
+  display: block;
+  margin: 20px 40px 0 10px;
+}
+.technology-container {
+  width: 100%;
+  margin: 20px 40px 40px 0;
+}
+.technology-section__header {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.technology-section__description {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 14px;
+}
+.technology-section__technologies {
+  list-style-type: circle;
+  padding-left: 20%;
+}
+.project-page__resources {
+  width: 100%;
+}
+.resources-title {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (min-width: 415px) {
+  /* portfolio.ejs min width 415px -----------------------------------------------------*/
+  .img-div {
+    display: flex;
+    padding-left: 10%;
+  }
+}
 html,
 body {
   height: 100%;
@@ -491,330 +871,11 @@ svg.active-link {
 .footer-icon:hover {
   color: #080835;
 }
-/* index.ejs all screen sizes----------------------------------------------------- */
-.resume-link {
-  font-family: 'Supermercado One', cursive;
-  font-size: 32px;
-  color: black;
-  text-decoration: none;
-  float: left;
-  margin: 0 20% 0 5%;
-}
-.resume-link:hover {
-  color: #68688a;
-}
-.contact-info {
-  line-height: 1.2;
-  text-align: center;
-}
-a.next-page__link[href="/portfolio"] {
-  margin: 0 20% 0 0;
-  padding: 5px;
-  font-size: 32px;
-  height: 40px;
-}
-.main-paragraph {
-  margin-bottom: 20px;
-}
-.skills-container {
-  margin-bottom: 25px;
-}
-.skills-container__label {
-  font-size: 24px;
-  font-family: 'Proza Libre', sans-serif;
-  margin-bottom: 8px;
-}
-.skill-label {
-  height: 25px;
-}
-.progress-bar__container {
-  height: 25px;
-}
-.extra-links {
-  display: flex;
-  justify-content: flex-end;
-}
-/*progress-bars -----------------------------------------------------*/
-progress[value] {
-  /* Reset the default appearance */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  color: #565666;
-  width: 150px;
-  height: 15px;
-}
-progress[value]::-webkit-progress-bar {
-  background-color: #eee;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-}
-progress[value]::-webkit-progress-value {
-  background-color: #565666;
-}
-progress[value]::-moz-progress-bar {
-  background-color: #565666;
-}
-/* fallback for progress bar */
-.progress-bar {
-  background-color: whiteSmoke;
-  border-radius: 2px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
-  width: 250px;
-  height: 20px;
-  position: relative;
-  display: block;
-}
-.progress-bar > span {
-  background-color: blue;
-  border-radius: 2px;
-  display: block;
-  text-indent: -9999px;
-}
-.nav-list-item {
-  display: inline;
-  margin-right: 20px;
-  font-size: 24px;
-}
-/* portfolio content no media query -carousel -----------------------------------------------------*/
-.page-title.portfolio {
-  margin-left: 5%;
-}
-.projects-container {
-  margin-bottom: 10px;
-}
-.project_container {
-  margin: 10px 20px 10px 0;
-  position: relative;
-}
-.project-img {
-  width: 50vw;
-  min-width: 135px;
-  height: 30vw;
-  min-height: 100px;
-  border: 1px solid silver;
-  border-radius: 2px;
-}
-/* hover transition for img-description */
-.img-description {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #4d526cb8;
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  padding: 15px;
-  /* transition effect. not necessary */
-  transition: opacity .8s, visibility .5s, height 1s;
-}
-.project_container:hover .img-description {
-  visibility: visible;
-  opacity: 1;
-  height: 90%;
-  box-shadow: 1.5px 2px 2px 4px #ada7a7;
-}
-.project-title {
-  font-family: 'Proza Libre', sans-serif;
-  font-size: 24px;
-}
-.project-description {
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-.project-description__link {
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  background-color: #89baba52;
-  padding: 6px;
-  border-radius: 2px;
-  transition: transform 1.5s;
-  text-align: center;
-}
-.project-description__link:hover {
-  box-shadow: 1px 1px 2px 2.5px #4f787852;
-  -webkit-transform: rotate(3deg);
-  transform: rotate(3deg);
-}
-/* end hover content for projects */
-.display-none {
-  display: none;
-}
-.projects-button__carousel {
-  font-size: 32px;
-}
-.projects-button__carousel:hover {
-  color: gray;
-  cursor: pointer;
-}
-.angle-container {
-  padding-left: 25%;
-}
-#right {
-  margin-right: 20%;
-}
-/* animations for portfolio/projects */
-.slide-left {
-  animation: slideleft 2s;
-}
-.slide-right {
-  animation: slideright 2s;
-}
-.slide-left_out {
-  animation: fadeout 2.5s, slideleft 2.5s;
-}
-.slide-left_in {
-  animation: fadein 2.5s, slideleft 2.5s;
-}
-.slide-right_in {
-  animation: fadein 2.5s, slideright 2.5s;
-}
-.slide-right_out {
-  animation: fadeout 2.5s, slideright 2.5s;
-}
-@keyframes slideleft {
-  from {
-    position: relative;
-    right: 0;
-  }
-  to {
-    position: relative;
-    right: 65%;
-  }
-}
-@keyframes slideright {
-  from {
-    position: relative;
-    right: 62%;
-  }
-  to {
-    position: relative;
-    right: 0;
-  }
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-/* projects page no media query -----------------------------------------------------*/
-.next-project__arrow {
-  font-size: 100px;
-  margin-top: 150px;
-}
-.next-project__arrow:hover {
-  color: #29447e;
-}
-.next-project__link {
-  display: block;
-  text-decoration: none;
-  color: black;
-}
-.middle-container {
-  display: flex;
-}
-.main-section.project {
-  width: 90%;
-  display: flex;
-  flex-flow: row wrap;
-}
-.project-page__headers {
-  width: 100%;
-}
-.project-page_title {
-  font-family: 'Proza Libre', sans-serif;
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-.project-page__description {
-  margin-bottom: 25px;
-}
-.summary-section {
-  width: 50%;
-}
-.summary-header {
-  font-family: 'Proza Libre', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-}
-.project__second-container {
-  width: 50%;
-}
-.project__second-paragraph {
-  width: 100%;
-  margin: 20px 20px 20px 0;
-}
-.project img {
-  width: 450px;
-  height: 250px;
-  box-shadow: 2.5px 2.5px 3px 3.5px #8a8a8a;
-  display: block;
-  margin: 20px 40px 0 10px;
-}
-.technology-container {
-  width: 100%;
-  margin: 20px 40px 40px 0;
-}
-.technology-section__header {
-  font-family: 'Proza Libre', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.technology-section__description {
-  font-family: 'Proza Libre', sans-serif;
-  font-size: 14px;
-}
-.technology-section__technologies {
-  list-style-type: circle;
-  padding-left: 20%;
-}
-.project-page__resources {
-  width: 100%;
-}
-.resources-title {
-  font-family: 'Proza Libre', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-}
 /* about-me.ejs no media query -----------------------------------------------------*/
 .about-paragraph {
   margin-bottom: 20px;
   width: 80%;
   line-height: 1.2;
-}
-/* contact.ejs no media query ----------------------------------------------------- */
-.input {
-  padding: 2px 4px;
-  font-family: 'Proza Libre', sans-serif;
-}
-.submit-button {
-  border-radius: 2px;
-  border: 1px solid #cfc9bc;
-  background-color: #e7e0d0;
-  font-family: 'Proza Libre', sans-serif;
-  cursor: pointer;
-  padding: 2px 8px;
-}
-.submit-button:hover {
-  color: white;
-  background-color: #9c9a97;
 }
 /* Page content */
 @media (min-width: 415px) {
@@ -844,63 +905,6 @@ progress[value]::-moz-progress-bar {
   .skills-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  /* contact page min width 415 px -----------------------------------------------------*/
-  .contact-form {
-    display: grid;
-    grid-template-columns: 15% 20% 15px 10% 40%;
-    grid-template-rows: 40px 40px 40px 40px 30px 30px;
-    margin-bottom: 20px;
-  }
-  .firstName-label {
-    grid-row: 2 / span 1;
-  }
-  input[name=firstName] {
-    grid-row: 2 / span 1;
-  }
-  .lastName-label {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-  }
-  input[name=lastName] {
-    grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
-  }
-  .email-label {
-    grid-column: 1 / span 1;
-    grid-row: 4 / span 1;
-  }
-  input[name=email] {
-    grid-row: 4 / span 1;
-  }
-  .message-label {
-    grid-column: 4 / span 1;
-    grid-row: 1 / span 1;
-  }
-  textarea[name=message] {
-    grid-column: 4 / span 2;
-    grid-row: 2 / span 5;
-  }
-  textarea.message-input {
-    padding: 4px;
-  }
-  .submit-button {
-    grid-column: 2 / span 1;
-    grid-row: 6 / span 1;
-  }
-  input.input {
-    height: 30px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    border: 1px solid #aca1a1;
-  }
-  .response-text {
-    margin-left: 30%;
-  }
-  /* portfolio.ejs min width 415px -----------------------------------------------------*/
-  .img-div {
-    display: flex;
-    padding-left: 10%;
   }
 }
 /* end media query min width 415 px */

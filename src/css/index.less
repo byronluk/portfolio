@@ -1,0 +1,90 @@
+/* index.ejs all screen sizes----------------------------------------------------- */
+.resume-link {
+  font-family: 'Supermercado One', cursive;
+  font-size: 32px;
+  color: black;
+  text-decoration: none;
+  float: left;
+  margin: 0 20% 0 5%;
+}
+.resume-link:hover {
+  color: rgb(104, 104, 138);
+}
+.contact-info {
+  line-height: 1.2;
+  text-align: center;
+}
+a.next-page__link[href='/portfolio'] {
+  margin: 0 20% 0 0;
+  padding: 5px;
+  font-size: 32px;
+  height: 40px;
+}
+.main-paragraph {
+  margin-bottom: 20px;
+}
+.skills-container {
+  margin-bottom: 25px;
+}
+.skills-container__label {
+  font-size: 24px;
+  font-family: 'Proza Libre', sans-serif;
+  margin-bottom: 8px;
+}
+.skill-label {
+  height: 25px;
+}
+.progress-bar__container {
+  height: 25px;
+}
+.extra-links {
+  display: flex;
+  justify-content: flex-end;
+}
+/*progress-bars -----------------------------------------------------*/
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  color: rgb(86, 86, 102);
+  width: 150px;
+  height: 15px;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+  background-color: rgb(86, 86, 102);
+}
+progress[value]::-moz-progress-bar {
+  background-color: rgb(86, 86, 102);
+}
+/* fallback for progress bar */
+.progress-bar {
+  background-color: whiteSmoke;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+
+  width: 250px;
+  height: 20px;
+
+  position: relative;
+  display: block;
+}
+
+.progress-bar > span {
+  background-color: blue;
+  border-radius: 2px;
+
+  display: block;
+  text-indent: -9999px;
+}
+.nav-list-item {
+  display: inline;
+  margin-right: 20px;
+  font-size: 24px;
+}
