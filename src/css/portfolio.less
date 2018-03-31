@@ -153,68 +153,48 @@
 }
 .main-section.project {
   width: 90%;
-  display: flex;
-  flex-flow: row wrap;
 }
-.project-page__headers {
+.main-section.project div:first-child {
   width: 100%;
+  margin-bottom: 20px;
 }
-.project-page_title {
+.main-section.project div:first-child h1 {
   font-family: 'Proza Libre', sans-serif;
   font-size: 24px;
   margin-bottom: 5px;
 }
-.project-page__description {
-  margin-bottom: 25px;
+.project-content {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 25px;
+  grid-column-gap: 25px;
 }
-.summary-section {
-  width: 50%;
-}
-.summary-header {
+.header {
   font-family: 'Proza Libre', sans-serif;
   font-size: 20px;
   font-weight: bold;
-}
-.project__second-container {
-  width: 50%;
-}
-.project__second-paragraph {
-  width: 100%;
-  margin: 20px 20px 20px 0;
 }
 .project img {
-  width: 450px;
-  height: 250px;
+  width: 100%;
   box-shadow: 2.5px 2.5px 3px 3.5px #8a8a8a;
   display: block;
-  margin: 20px 40px 0 10px;
 }
-.technology-container {
-  width: 100%;
-  margin: 20px 40px 40px 0;
+div.technology-container {
+  margin-top: 20px;
 }
-.technology-section__header {
-  font-family: 'Proza Libre', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.technology-section__description {
+div.technology-container h4.header + p {
   font-family: 'Proza Libre', sans-serif;
   font-size: 14px;
+  margin-top: 10px;
 }
-.technology-section__technologies {
-  list-style-type: circle;
-  padding-left: 20%;
+p.technologies {
+  margin: 5px 0;
 }
-.project-page__resources {
-  width: 100%;
+div.resources-container {
+  margin-top: 20px;
 }
-.resources-title {
-  font-family: 'Proza Libre', sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-}
+
 @media (min-width: 415px) {
   /* portfolio.ejs min width 415px -----------------------------------------------------*/
   .img-div {
