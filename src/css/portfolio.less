@@ -166,33 +166,67 @@
 .project-content {
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows: 1fr 1fr;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
+}
+div.project-content p {
+  line-height: 1.2;
 }
 .header {
   font-family: 'Proza Libre', sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
-.project img {
+.project-image {
   width: 100%;
   box-shadow: 2.5px 2.5px 3px 3.5px #8a8a8a;
+  margin-bottom: 30px;
   display: block;
 }
-div.technology-container {
-  margin-top: 20px;
+div.content-column div {
+  margin-bottom: 20px;
 }
-div.technology-container h4.header + p {
+div.content-column div:nth-child(2) h3.header + p {
   font-family: 'Proza Libre', sans-serif;
   font-size: 14px;
   margin-top: 10px;
 }
-p.technologies {
+div.content-column div:nth-child(2) p:last-child {
   margin: 5px 0;
 }
-div.resources-container {
-  margin-top: 20px;
+ul.resources {
+  list-style: disc outside;
+  padding-left: 20px;
+}
+ul.resources li a {
+  text-decoration-line: none;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-outline-primary {
+  color: #007bff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #007bff;
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
 }
 
 @media (min-width: 415px) {
