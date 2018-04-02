@@ -20,24 +20,21 @@
         <div class="main-section project">
           <div>
             <h1>Movie Finder</h1>
-            <p>
-              <p>
           </div>
 
           <div class="project-content">
             <div class="images-column">
-              <img class="project-image" src="../img/write-letters/write-letters.png" alt="Screenshot of Write a Letter" />
-              <img class="project-image" src="../img/write-letters/write-letters.png" alt="Screenshot of Write a Letter" />
+              <img class="project-image" src="../img/movie-finder/search.png" alt="Screenshot of Write a Letter" />
+              <img class="project-image" src="../img/movie-finder/details.png" alt="Screenshot of Write a Letter" />
             </div>
             <div class="content-column">
               <div>
-                <h3 class="header">About this project</h3>
+                <h3 class="header">Summary</h3>
                 <hr />
                 <p>
-                  commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                  mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
-                  a, venenatis vitae, justo.
+                  This project was built to practice with React-Router and handle multiple routes within a single-page application. Working
+                  on this solidified my knowledge of React and Redux. I utilized OMDB's API to handle the movie details and
+                  implemented a cache to store the details for the most recent movies viewed.
                 </p>
               </div>
 
@@ -54,12 +51,13 @@
               </div>
 
               <div>
+                <h3 class="header">Search Page</h3>
+                <hr />
                 <p>
-                  nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
-                  sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio
-                  et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-                  amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis
-                  magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+                  Implementing the search bar feature was done through sending a GET request to the OMDB API with parameters for an array of
+                  the movies that match the search criteria. Once the response from the server is received, the results are
+                  displayed on the screen through mapping over the array and displaying each item in a container with the
+                  name, image, and a link for more details.
                 </p>
               </div>
 
@@ -68,7 +66,10 @@
                 <hr />
                 <ul class="resources">
                   <li>You can get a live experience at
-                    <a href="https://hothomes.herokuapp.com/" target="_blank">Movie Finder</a>
+                    <a class="btn btn-sm btn-outline-primary" href="https://bl-movie-finder.herokuapp.com/" target="_blank">Movie Finder</a>
+                  </li>
+                  <li>View my code on
+                    <a class="btn btn-sm btn-outline-primary" href="https://github.com/byronluk/react-movie-finder/" target="_blank">Github</a>
                   </li>
                 </ul>
               </div>
