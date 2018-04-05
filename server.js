@@ -28,31 +28,38 @@ app.get('/portfolio', (req, res) => {
 });
 app.get('/portfolio/:project', (req, res) => {
   res.render(`projects/${req.params.project}`);
-})
+});
 
 app.get('/about', (req, res) => {
   res.render('about', { title: 'Byron Luk | Front-End Web Developer' });
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact', { title: 'Contact Me | Front-End Web Developer', mailSent: false });
+  res.render('contact', {
+    title: 'Contact Me | Front-End Web Developer',
+    mailSent: false
+  });
 });
 
 app.post('/contact', (req, res) => {
-  var firstName = req.body.firstName
-  res.render('contact', { title: 'Thanks ' + firstName, firstName: firstName, mailSent: true });
+  var firstName = req.body.firstName;
+  res.render('contact', {
+    title: 'Thanks ' + firstName,
+    firstName: firstName,
+    mailSent: true
+  });
   const msg = {
     to: 'byronluk@gmail.com',
     from: req.body.email,
     subject: 'Portfolio contact from ' + firstName + ' ' + req.body.lastName,
-    text: req.body.message,
+    text: req.body.message
   };
   sgMail.send(msg);
 });
 
 app.get('*', (req, res) => {
   res.send('Page not found 404').status(404);
-})
+});
 const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
