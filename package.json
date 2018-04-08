@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "build": "npm install && npm run less",
+    "start": "npm run build && node server.js",
     "less": "lessc src/css/style.less public/style.css",
     "less-watch": "less-watch-compiler src/css public style.less style.css"
   },
